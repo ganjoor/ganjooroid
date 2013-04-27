@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">گنجور</string>
+    <string name="blank"></string>
+    <string name="poetList">فهرست شاعران</string>
+    <string name="exit">خروج</string>
+    <string name="options">پیکربندی</string>
+    <string name="next">بعدی</string>
+    <string name="prev">قبلی</string>
+    <string name="about">معرفی</string>
+    <string name="download">دریافت مجموعه‌ها</string>
+    <string name="fetchList">دریافت فهرست</string>
+    <string name="newlist">مجموعه های تازه:</string>
+    <string name="dismiss">انصراف</string>
+    <string name="dnwnld_wnd">دریافت مجموعه ها</string>
+    <string name="delete">حذف شاعر</string>
+</resources>

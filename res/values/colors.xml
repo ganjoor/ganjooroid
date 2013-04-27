@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="titelLinkColor">#FF0000FF</color>
+    <color name="titlebackgroundcolor">#111111</color>
+    <color name="mnuBackColor">#222222</color>
+    <color name="downloadBkColor">#FFAA00</color>
+</resources>

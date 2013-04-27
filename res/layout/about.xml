@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/aboutLayout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+              android:orientation="vertical">
+    <TextView android:id="@+id/appVersion"
+              android:textColor="#FFF" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal"/>
+    <TextView android:id="@+id/quickHelp"
+              android:layout_height="fill_parent"
+              android:textColor="#FFF" android:layout_width="match_parent" android:gravity="center_horizontal"/>
+              
+</LinearLayout>

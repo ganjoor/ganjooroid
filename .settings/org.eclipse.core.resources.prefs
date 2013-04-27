@@ -1,0 +1,18 @@
+#Fri Oct 12 18:56:49 IRST 2012
+eclipse.preferences.version=1
+encoding//src/com/android/ganjoor/AppSettings.java=UTF-8
+encoding//src/com/android/ganjoor/AppSettingsOpenHelper.java=UTF-8
+encoding//src/com/android/ganjoor/DownloadFile.java=UTF-8
+encoding//src/com/android/ganjoor/GDBInfo.java=UTF-8
+encoding//src/com/android/ganjoor/GDBList.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorActivity.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorBrowsingHistory.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorCat.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorDatabaseDownloaderActivity.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorDbBrowser.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorListReceiver.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorPoem.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorPoet.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorVerse.java=UTF-8
+encoding//src/com/android/ganjoor/GanjoorView.java=UTF-8
+encoding//src/com/android/ganjoor/PersianNumberFormat.java=UTF-8

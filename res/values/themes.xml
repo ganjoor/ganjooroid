@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <style name="ganjoorTheme" parent="android:Theme">
+        <!-- <item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item> -->
+        <item name="android:windowTitleSize">48px</item>
+        </style>
+    </resources>

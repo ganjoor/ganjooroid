@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:baselineAligned="true" android:orientation="horizontal" android:layout_height="48px" android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_height="match_parent" android:id="@+id/txtDownloadTitle" android:text="دریافت مجموعه ها" android:layout_weight="1" android:layout_width="match_parent" android:gravity="center|right" android:layout_gravity="right"></TextView>
+</LinearLayout>

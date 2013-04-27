@@ -1,0 +1,27 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:layout_width="fill_parent" android:orientation="vertical" android:id="@+id/menuLayout" android:background="@color/mnuBackColor" android:padding="5px">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/mnuHome">
+            <Button android:background="@drawable/home" android:layout_width="wrap_content" android:text="@string/blank"  android:onClick="onHomeClick" android:layout_height="wrap_content" android:gravity="center_vertical|right" android:id="@+id/btnHome"></Button>
+            <TextView android:text="@string/poetList" android:gravity="center_vertical|right" android:onClick="onHomeClick" android:clickable="true" android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/tvHome"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/mnuDelete">
+            <Button android:layout_height="wrap_content" android:text="@string/blank" android:id="@+id/btnDelete" android:gravity="center_vertical|right" android:onClick="onDeleteClick" android:layout_width="wrap_content" android:background="@drawable/cancel"></Button>
+            <TextView android:onClick="onDeleteClick" android:layout_width="match_parent" android:text="@string/delete" android:clickable="true" android:gravity="center_vertical|right" android:layout_height="match_parent" android:id="@+id/tvDelete"></TextView>
+        </LinearLayout>        
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/mnuOptions">
+            <Button android:background="@drawable/gear" android:layout_width="wrap_content" android:onClick="onOptionsClick" android:layout_height="wrap_content" android:gravity="center_vertical|right" android:text="@string/blank" android:id="@+id/btnOptions"></Button>
+            <TextView android:text="@string/options" android:gravity="center_vertical|right" android:onClick="onOptionsClick" android:clickable="true" android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/tvOptions"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/mnuDownload">
+            <Button android:layout_height="wrap_content" android:text="@string/blank" android:id="@+id/btnDownload" android:gravity="center_vertical|right" android:onClick="onDownloadClick" android:layout_width="wrap_content" android:background="@drawable/download"></Button>
+            <TextView android:onClick="onDownloadClick" android:layout_width="match_parent" android:text="@string/download" android:clickable="true" android:gravity="center_vertical|right" android:layout_height="match_parent" android:id="@+id/tvDownload"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/mnuAbout">
+            <Button android:layout_height="wrap_content" android:text="@string/blank" android:id="@+id/btnAbout" android:gravity="center_vertical|right" android:onClick="onAboutClick" android:layout_width="wrap_content" android:background="@drawable/help"></Button>
+            <TextView android:onClick="onAboutClick" android:layout_width="match_parent" android:text="@string/about" android:clickable="true" android:gravity="center_vertical|right" android:layout_height="match_parent" android:id="@+id/tvAbout"></TextView>
+        </LinearLayout>        
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/mnuExit">
+            <Button android:layout_height="wrap_content" android:text="@string/blank" android:id="@+id/btnExit" android:gravity="center_vertical|right" android:onClick="onExitClick" android:layout_width="wrap_content" android:background="@drawable/exit"></Button>
+            <TextView android:onClick="onExitClick" android:layout_width="match_parent" android:text="@string/exit" android:clickable="true" android:gravity="center_vertical|right" android:layout_height="match_parent" android:id="@+id/tvExit"></TextView>
+        </LinearLayout>        
+    </LinearLayout>
