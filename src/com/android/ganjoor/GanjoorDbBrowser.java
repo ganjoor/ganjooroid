@@ -12,6 +12,7 @@ import java.io.OutputStream;
 import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
@@ -690,7 +691,7 @@ public class GanjoorDbBrowser {
 		cursor = gdbOpener._db.query("cat", new String[]{"id", "poet_id", "text", "parent_id", "url"}, null, null, null, null, null);
 		if(cursor.moveToFirst()) {
 			do{
-				sql = String.format("INSERT INTO cat (id, poet_id, text, parent_id, url) VALUES (%d, %d, \"%s\", %d, \"%s\");",			
+				sql = String.format(Locale.ENGLISH, "INSERT INTO cat (id, poet_id, text, parent_id, url) VALUES (%d, %d, \"%s\", %d, \"%s\");",			
 								cursor.getInt(IDX_CAT_ID),
 								cursor.getInt(IDX_CAT_POETID),
 								cursor.getString(IDX_CAT_TEXT),
@@ -705,7 +706,7 @@ public class GanjoorDbBrowser {
 		cursor = gdbOpener._db.query("poet", new String[]{"id", "name", "cat_id", "description"}, null, null, null, null, null);
 		if(cursor.moveToFirst()) {
 			do{
-				sql = String.format("INSERT INTO poet (id, name, cat_id, description) VALUES (%d, \"%s\", %d, \"%s\");",			
+				sql = String.format(Locale.ENGLISH, "INSERT INTO poet (id, name, cat_id, description) VALUES (%d, \"%s\", %d, \"%s\");",			
 						cursor.getInt(IDX_POET_ID),
 						cursor.getString(IDX_POET_NAME),
 						cursor.getInt(IDX_POET_CATID),
@@ -719,7 +720,7 @@ public class GanjoorDbBrowser {
 		cursor = gdbOpener._db.query("poem", new String[]{"id", "cat_id", "title", "url"}, null, null, null, null, null);
 		if(cursor.moveToFirst()) {
 			do{
-				sql = String.format("INSERT INTO poem (id, cat_id, title, url) VALUES (%d, %d, \"%s\", \"%s\");",			
+				sql = String.format(Locale.ENGLISH,"INSERT INTO poem (id, cat_id, title, url) VALUES (%d, %d, \"%s\", \"%s\");",			
 						cursor.getInt(IDX_POEM_ID),
 						cursor.getInt(IDX_POEM_CATID),
 						cursor.getString(IDX_POEM_TITLE),
@@ -733,7 +734,7 @@ public class GanjoorDbBrowser {
 		cursor = gdbOpener._db.query("verse", new String[]{"poem_id", "vorder", "position", "text"}, null, null, null, null, null);
 		if(cursor.moveToFirst()) {
 			do{
-				sql = String.format("INSERT INTO verse (poem_id, vorder, position, text) VALUES (%d, %d, %d, \"%s\");",			
+				sql = String.format(Locale.ENGLISH,"INSERT INTO verse (poem_id, vorder, position, text) VALUES (%d, %d, %d, \"%s\");",			
 						cursor.getInt(IDX_VERSE_POEMID),
 						cursor.getInt(IDX_VERSE_ORDER),
 						cursor.getInt(IDX_VERSE_POSITION),
@@ -802,11 +803,11 @@ public class GanjoorDbBrowser {
 		for(GanjoorCat subCat : subCats){
 			DeleteCat(subCat);
 		}		
-		String sql = String.format("DELETE FROM verse WHERE poem_id IN (SELECT id FROM poem WHERE cat_id=%d);", Cat._ID);
+		String sql = String.format(Locale.ENGLISH, "DELETE FROM verse WHERE poem_id IN (SELECT id FROM poem WHERE cat_id=%d);", Cat._ID);
 		_db.execSQL(sql);
-		sql = String.format("DELETE FROM poem WHERE cat_id=%d;", Cat._ID);
+		sql = String.format(Locale.ENGLISH, "DELETE FROM poem WHERE cat_id=%d;", Cat._ID);
 		_db.execSQL(sql);
-		sql = String.format("DELETE FROM cat WHERE id=%d;", Cat._ID);
+		sql = String.format(Locale.ENGLISH, "DELETE FROM cat WHERE id=%d;", Cat._ID);
 		_db.execSQL(sql);		
 	}
 	
@@ -816,7 +817,7 @@ public class GanjoorDbBrowser {
 	 */
 	public void DeletePoet(GanjoorPoet Poet){
 		DeleteCat(getCat(Poet._CatID));
-		String sql = String.format("DELETE FROM poet WHERE id=%d;", Poet._ID);
+		String sql = String.format(Locale.ENGLISH, "DELETE FROM poet WHERE id=%d;", Poet._ID);
 		_db.execSQL(sql);		
 	}
 	
