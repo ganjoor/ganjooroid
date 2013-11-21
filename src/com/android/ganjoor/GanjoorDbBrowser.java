@@ -69,7 +69,9 @@ public class GanjoorDbBrowser {
 		//if(!getDatabaseFileExists())
 		//	return false;
      	try{
-     		_db = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);	
+     		_db = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
+     		
+     		CreateIndexSetOnDb(_db); //ساخت ایندکسها
      	}
      	catch(Exception exp){
      		_LastError = exp.toString();
@@ -169,7 +171,36 @@ public class GanjoorDbBrowser {
         }catch(SQLException exp){
         	return false;
         }
-
+        
+        CreateIndexSetOnDb(newDb);
+        
+        return true;
+	}
+	
+	/**
+	 * ایجاد ایندکسها
+	 * @param db دیتابیس ورودی
+	 * @return نتیجه عملیات
+	 */
+	private static Boolean CreateIndexSetOnDb(SQLiteDatabase db){
+        String sql = "CREATE UNIQUE INDEX IF NOT EXISTS idx_poem_catid ON poem(id ASC, cat_id ASC);";
+        try{
+        	db.execSQL(sql);
+        }catch(SQLException exp){
+        	return false;
+        }
+        sql = "CREATE INDEX IF NOT EXISTS idx_poem_title ON poem(id ASC, title ASC);";
+        try{
+        	db.execSQL(sql);
+        }catch(SQLException exp){
+        	return false;
+        }
+        sql = "CREATE UNIQUE INDEX IF NOT EXISTS idx_verse ON verse(poem_id ASC, vorder ASC);";
+        try{
+        	db.execSQL(sql);
+        }catch(SQLException exp){
+        	return false;
+        }
         return true;
 	}
 	
